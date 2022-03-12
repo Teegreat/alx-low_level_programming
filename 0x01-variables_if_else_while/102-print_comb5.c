@@ -1,26 +1,33 @@
 #include <stdio.h>
+
 /**
- * main - entry function for program
- *
- * Description: print '00', '01'..'99'
- *
- * Return: always 0 (success)
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-        int i, q;
+	int i, j;
 
-        for (i = 48; i < 58; i++)
-        {
-                for (q = 48; q < 58; q++)
-                {
-                        putchar(i);
-                        putchar(q);
-                        if (i == 57 && q == 57)
-                                continue;
-                        putchar(44);
-                        putchar(32);
-                }
-        }
-        putchar(10);
+	for (i = 0; i < 100; i++)
+	{
+		for (j = 0; j < 100; j++)
+		{
+			if (i < j)
+			{
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 
+		}
+	}
+	putchar('\n');
+	return (0);
+}
