@@ -1,27 +1,31 @@
 #include <stdio.h>
 /**
- * main - entry function for program
+ * main - entry point of function
  *
- * Description: print '00', '01'..'99'
+ * Description - print 00, 01..89 skip duplicates
  *
  * Return: always 0 (success)
  */
 int main(void)
 {
-	int i, q;
+	int a, b;
 
-	for (i = 48; i < 58; i++)
+	a = '0';
+	while (a < '9')
 	{
-		for (q = 48; q < 58; q++)
+		b = a + 1;
+		while (b <= '9')
 		{
-			putchar(i);
-			putchar(q);
-			if (i == 57 && q == 57)
-				continue;
-			putchar(44);
-			putchar(32);
+			putchar(a);
+			putchar(b++);
+			if (a != '8')
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
+		a++;
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
