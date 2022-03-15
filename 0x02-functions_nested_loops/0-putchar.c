@@ -7,12 +7,8 @@
 */
 int main(void)
 {
-	putchar('S');
-	putchar('c');
-	putchar('h');
-	putchar('o');
-	putchar('o');
-	putchar('l');
+	putchar("p");
+	putchar("u");
 	putchar('\n');
 
 
