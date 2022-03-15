@@ -7,12 +7,12 @@
 */
 int main(void)
 {
-	_putchar('S');
-	_putchar('c');
-	_putchar('h');
-	_putchar('o');
-	_putchar('o');
-	_putchar('l');
-	_putchar('\n');
+	putchar('S');
+	putchar('c');
+	putchar('h');
+	putchar('o');
+	putchar('o');
+	putchar('l');
+	putchar('\n');
 	return (0);
 }
